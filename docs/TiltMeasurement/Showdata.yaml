@@ -1,0 +1,14 @@
+/showdata_TiltMeasurement/{DMC}:
+get:
+tags:
+  - showdata_TiltMeasurement
+parameters:
+  - in: path
+    name: DMC
+    required: true
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

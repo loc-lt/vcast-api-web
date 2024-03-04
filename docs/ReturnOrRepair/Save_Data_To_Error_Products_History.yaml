@@ -1,0 +1,43 @@
+Save_Data_To_Error_Products_History
+---
+tags:
+  - Save_Data_To_Error_Products_History
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Product_Code"
+        - "Error_Code"
+        - "Error_Stage"
+        - "Erorr_Detected_Position"
+        - "Stage"
+        - "Num_Subtraction"
+      properties:
+        Product_Code:
+          type: "Product_Code"
+          example: XXXXXXXX"
+        Error_Code:
+          type: "Error_Code"
+          example: "XXXXXXXX"
+        Error_Stage:
+          type: "Error_Stage"
+          example: "XXXXXXXX"
+        Erorr_Detected_Position:
+          type: "Erorr_Detected_Position"
+          example: "XXXXXXXX" 
+        Machine_Name:
+          type: "Machine_Name"
+          example: "XXXXXXXX"      
+        Num_Subtraction:
+          type: "Num_Subtraction"
+          example: "XXXXXXXX" 
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

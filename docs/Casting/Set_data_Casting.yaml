@@ -1,0 +1,39 @@
+SAVE_DATA_CASTING
+---
+tags:
+  - insertdatacasting
+parameters:
+  - name: body
+    description: The body should contain the set data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Position"
+        - "Time_in"
+        - "Time_out"
+        - "Zouhbo"
+        - "MTM"
+      properties:
+        Position:
+          type: "Position"
+          example: "MANH1"
+        Time_in:
+          type: "Time_in"
+          example: "YYYY-MM-DD"
+        Time_out:
+          type: "Time_out"
+          example: "YYYY-MM-DD"
+        Zouhbo:
+          type: "Zouhbo"
+          example: "XXXX"
+        MTM:
+          type: "MTM"
+          example: "XXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

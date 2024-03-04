@@ -1,0 +1,27 @@
+Senderorr
+---
+tags:
+  - Sendtelegramerorr
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "ID"
+        - "MSG"
+      properties:
+        ID:
+          type: "ID"
+          example: "XXXXXXX"
+        MSG:
+          type: "MSG"
+          example: "XXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

@@ -1,0 +1,27 @@
+get_count_result
+---
+tags:
+  - get_count_result
+parameters:
+  - name: body
+    description: The body should contain the show count result
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "MachineNo"
+        - "NameProduct"
+      properties:
+        MachineNo:
+          type: "MachineNo"
+          example: "XXXX"
+        NameProduct:
+          type: "NameProduct"
+          example: "XXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

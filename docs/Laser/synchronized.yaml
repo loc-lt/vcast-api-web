@@ -1,0 +1,27 @@
+synchronized
+---
+tags:
+  - synchronized
+parameters:
+  - name: body
+    description: The body should contain the synchronized data casting
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Castingname"
+        - "TimeCasting"
+      properties:
+        Castingname:
+          type: "Castingname"
+          example: "XXXX"
+        TimeCasting:
+          type: "TimeCasting"
+          example: "XXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

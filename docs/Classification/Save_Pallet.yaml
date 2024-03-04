@@ -1,0 +1,42 @@
+Save_Pallet_Classification
+---
+tags:
+  - Save_Pallet_Classification
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Time"
+        - "Product"
+        - "Date"
+        - "Pallet_No"
+        - "Pallet_Name"
+        - "SPLR_LOT_NO"
+      properties:
+        Time:
+          type: "Time"
+          example: "XXXX"
+        Product:
+          type: "Product"
+          example: "XXXX"
+        Date:
+          type: "Date"
+          example: "XXXX"
+        Pallet_No:
+          type: "Pallet_No"
+          example: "XXXX"
+        Pallet_Name:
+          type: "Pallet_Name"
+          example: "XXXX"
+        SPLR_LOT_NO:
+          type: "SPLR_LOT_NO"
+          example: "XXXX"
+responses:
+  201:
+    description: When a data insert success
+  400:
+    description: Fails to insert due to bad request data

@@ -1,0 +1,47 @@
+Count_Measure_Diameter_GC
+---
+tags:
+  - count_history_Measure_Diameter_GC
+parameters:
+  - name: body
+    description: The body should contain the show count data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "strtoday"
+        - "strnextday"
+        - "Result"
+      properties:
+        strtoday:
+          type: "strtoday"
+          example: "XXXX"
+        strnextday:
+          type: "strnextday"
+          example: "XXXX"
+        Result:
+          type: "Result"
+          example: "XXXX"
+        responses:
+          "default":
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key'"
+              method.response.header.Access-Control-Allow-Methods: "'*'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+            responseTemplates:
+              application/json: |
+                {}
+responses:
+  201:
+    description: When a data insert success
+    headers:
+      Access-Control-Allow-Headers:
+        type: "string"
+      Access-Control-Allow-Methods:
+        type: "string"
+      Access-Control-Allow-Origin:
+        type: "string"
+  400:
+    description: Fails to insert due to bad request data

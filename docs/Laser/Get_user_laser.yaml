@@ -1,0 +1,14 @@
+/Get_user_laser/<Password>:
+get:
+tags:
+  - Get_user_laser
+parameters:
+  - in: path
+    name: Password
+    required: true
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

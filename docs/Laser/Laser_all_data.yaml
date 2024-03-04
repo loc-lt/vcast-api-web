@@ -1,0 +1,39 @@
+Data_history_Laser
+---
+tags:
+  - Laser_all_data
+parameters:
+  - name: body
+    description: The body should contain the show count data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "MachineNo"
+        - "TimeStart"
+        - "TimeFinish"
+        - "NameProduct"
+        - "NameOperator"
+      properties:
+        MachineNo:
+          type: "MachineNo"
+          example: "XXXX"
+        TimeStart:
+          type: "TimeStart"
+          example: "XXXX"
+        TimeFinish:
+          type: "TimeFinish"
+          example: "XXXX"
+        NameProduct:
+          type: "NameProduct"
+          example: "XXXX"
+        NameOperator:
+          type: "NameOperator"
+          example: "XXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

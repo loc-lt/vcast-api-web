@@ -1,0 +1,9 @@
+GET show about ScanQR
+---
+tags:
+  - GET_Data_All_ScanQR
+responses:
+  200:
+    description: return data table ScanQR
+  400:
+    description: not found

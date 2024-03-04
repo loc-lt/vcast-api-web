@@ -1,0 +1,31 @@
+Update_OK_NG_From_ReturnOrRepair_History
+---
+tags:
+  - Update_OK_NG_From_ReturnOrRepair_History
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Product_Code"
+        - "ErrorCode"
+        - "Can_Fix"
+      properties:
+        Product_Code:
+          type: "Product_Code"
+          example: "XXXXXXXX"
+        ErrorCode:
+          type: "ErrorCode"
+          example: "XXXXXXXX"
+        Can_Fix:
+          type: "Can_Fix"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

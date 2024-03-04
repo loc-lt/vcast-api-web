@@ -1,0 +1,51 @@
+Save Data Airtight Han
+---
+tags:
+  - InsertDataHan
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Machine"
+        - "Barcode"
+        - "Position"
+        - "Air_value"
+        - "Time_Start"
+        - "Time_Finish"
+        - "Quality"
+        - "Note"
+      properties:
+        Machine:
+          type: "Machine"
+          example: "crycetruly@gmail.com"
+        Barcode:
+          type: "Barcode"
+          example: "MAN-XXXXXXXX"
+        Position:
+          type: "string"
+          example: "A"
+        Air_value:
+          type: "Air_value"
+          example: "0"
+        Time_Start:
+          type: "Time_Start"
+          example: "yyyy-mm-dd hh:mm:ss"
+        Time_Finish:
+          type: "string"
+          example: "yyyy-mm-dd hh:mm:ss"
+        Quality:
+          type: "string"
+          example: "OK/NG"
+        Note:
+          type: "string"
+          example: "master"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

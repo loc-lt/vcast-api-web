@@ -1,0 +1,43 @@
+Update_CNC
+---
+tags:
+  - Update_data
+parameters:
+  - name: body
+    description: The body should contain the update data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Machineno"
+        - "Pos_product"
+        - "Position2"
+        - "TimeinCNC1"
+        - "TimeinCNC2"
+        - "TimeoutCNC2"
+      properties:
+        Machineno:
+          type: "Machineno"
+          example: "SET"
+        Pos_product:
+          type: "Pos_product"
+          example: "A"
+        Position2:
+          type: "Position1"
+          example: "OP1"
+        TimeinCNC1:
+          type: "TimeinCNC1"
+          example: "yyyy-mm-dd hh:mm:ss"
+        TimeinCNC2:
+          type: "TimeinCNC2"
+          example: "yyyy-mm-dd hh:mm:ss"
+        TimeoutCNC2:
+          type: "TimeoutCNC2"
+          example: "yyyy-mm-dd hh:mm:ss"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

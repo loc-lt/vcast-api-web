@@ -1,0 +1,14 @@
+/Check_data_airtight/{DMC}:
+get:
+tags:
+  - Check_data_airtight
+parameters:
+  - in: path
+    name: DMC
+    required: true
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

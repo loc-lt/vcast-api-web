@@ -1,0 +1,14 @@
+/Set_Security/{IP}:
+get:
+tags:
+  - Set_Security
+parameters:
+  - in: path
+    name: IP
+    required: true
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

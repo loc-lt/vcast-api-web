@@ -1,0 +1,14 @@
+/Get_machine_laser/{DMCin}:
+get:
+tags:
+  - Get_machine_laser
+parameters:
+  - in: path
+    name: DMCin
+    required: true
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

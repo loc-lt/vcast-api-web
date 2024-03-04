@@ -1,0 +1,14 @@
+/get_serial/{NameProduct}:
+get:
+tags:
+  - get_Waxmold_current
+parameters:
+  - in: path
+    name: NameProduct
+    required: true
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

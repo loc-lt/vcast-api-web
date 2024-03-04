@@ -1,0 +1,9 @@
+GET show setting_threadverification
+---
+tags:
+  - Data_setting_threadverification
+responses:
+  200:
+    description: return data table airtight
+  400:
+    description: not found

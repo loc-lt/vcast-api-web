@@ -1,0 +1,43 @@
+Update_duplicate_CMM
+---
+tags:
+  - Update_duplicate_CMM
+parameters:
+  - name: body
+    description: The body should contain the Update_duplicate_CMM
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "TimeSave"
+        - "actual"
+        - "deviation"
+        - "result"
+        - "DMC"
+        - "id"
+      properties:
+        TimeSave:
+          type: "TimeSave"
+          example: "MAN-XXXXXXXX"
+        actual:
+          type: "actual"
+          example: "MAN-XXXXXXXX"
+        deviation:
+          type: "deviation"
+          example: "MAN-XXXXXXXX"
+        result:
+          type: "Product"
+          example: "MAN-XXXXXXXX"
+        DMC:
+          type: "DMC_tray"
+          example: "MAN-XXXXXXXX"
+        id:
+          type: "id"
+          example: "MAN-XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

@@ -1,0 +1,23 @@
+Get_CNC_Product_Detail
+---
+tags:
+  - Get_CNC_Product_Detail
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Product_Code"
+      properties:
+        Product_Code:
+          type: "Product_Code"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

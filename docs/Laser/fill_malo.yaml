@@ -1,0 +1,27 @@
+fill_malo
+---
+tags:
+  - fill_malo
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "DMCout"
+        - "NameProduct"
+      properties:
+        DMCout:
+          type: "DMCout"
+          example: "XXXX"
+        NameProduct:
+          type: "NameProduct"
+          example: "XXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

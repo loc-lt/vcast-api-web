@@ -1,0 +1,35 @@
+Insert  data TempHumid
+---
+tags:
+  - Data insert TempHumid
+parameters:
+  - name: body
+    description: The body should contain the Insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Area"
+        - "Time_get"
+        - "Temp"
+        - "Humid"
+      properties:
+        Area:
+          type: "Area"
+          example: "KV1"
+        Time_get:
+          type: "Time_get"
+          example: "xxxx"
+        Temp:
+          type: "Temp"
+          example: "12"
+        Humid:
+          type: "Humid"
+          example: "123"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

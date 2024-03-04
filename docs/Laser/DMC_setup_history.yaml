@@ -1,0 +1,47 @@
+DMC_setup_history
+---
+tags:
+  - DMC_setup_history
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Date"
+        - "NguoiThayDoi"
+        - "MaHang"
+        - "MaBanVeTruoc"
+        - "MaBanVeSau"
+        - "PhienBanTruoc"
+        - "PhienBanSau"
+      properties:
+        Date:
+          type: "Date"
+          example: "yyyy-mm-dd hh:mm:ss"
+        NguoiThayDoi:
+          type: "NguoiThayDoi"
+          example: "XXXX"
+        MaHang:
+          type: "MaHang"
+          example: "XXXX"
+        MaBanVeTruoc:
+          type: "MaBanVeTruoc"
+          example: "XXXX"
+        MaBanVeSau:
+          type: "MaBanVeSau"
+          example: "XXXX"
+        PhienBanTruoc:
+          type: "PhienBanTruoc"
+          example: "XXXX"
+        PhienBanSau:
+          type: "PhienBanSau"
+          example: "XXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

@@ -1,0 +1,79 @@
+Insert_Data_Into_AirTight036
+---
+tags:
+  - Insert_Data_Into_AirTight036
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "TimeStart"
+        - "TimeFinish"
+        - "Machine"
+        - "DMC"
+        - "AirValue_1"
+        - "Result_Station_1"
+        - "AirValue_2"
+        - "Result_Station_2"
+        - "Total_Quality"
+        - "Note"
+        - "Note1"
+        - "Note2"
+        - "Note3"
+        - "Note4"
+        - "Note5"
+      properties:
+        TimeStart:
+          type: "TimeStart"
+          example: XXXXXXXX"
+        TimeFinish:
+          type: "TimeFinish"
+          example: "XXXXXXXX"
+        Machine:
+          type: "Machine"
+          example: "XXXXXXXX"
+        DMC:
+          type: "DMC"
+          example: "XXXXXXXX"
+        AirValue_1:
+          type: "AirValue_1"
+          example: "XXXXXXXX"
+        Result_Station_1:
+          type: "Result_Station_1"
+          example: "XXXXXXXX"
+        AirValue_2:
+          type: "AirValue_2"
+          example: "XXXXXXXX"
+        Result_Station_2:
+          type: "Result_Station_2"
+          example: "XXXXXXXX"
+        Total_Quality:
+          type: "Total_Quality"
+          example: "XXXXXXXX"
+        Note:
+          type: "Note"
+          example: "XXXXXXXX"
+        Note1:
+          type: "Note1"
+          example: "XXXXXXXX"
+        Note2:
+          type: "Note2"
+          example: "XXXXXXXX"
+        Note3:
+          type: "Note3"
+          example: "XXXXXXXX"
+        Note4:
+          type: "Note4"
+          example: "XXXXXXXX"
+        Note5:
+          type: "Note5"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

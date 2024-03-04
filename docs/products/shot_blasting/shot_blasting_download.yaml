@@ -1,0 +1,27 @@
+shot_blasting_download
+---
+tags:
+  - shot_blasting_download
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "timeStart"
+        - "timeEnd"
+      properties:
+        timeStart:
+          type: "timeStart"
+          example: "yyyy:mm:dd hh:mm:ss"
+        timeEnd:
+          type: "timeEnd"
+          example: "yyyy:mm:dd hh:mm:ss"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

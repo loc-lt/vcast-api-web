@@ -1,0 +1,33 @@
+Update_Data_TV_DB_V11
+---
+tags:
+  - Update_Data_TV_DB_V11
+parameters:
+  - name: body
+    description: The body should contain the update data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "number1"
+        - "d"
+        - "machine"
+        
+      properties:
+        number1:
+          type: "number1"
+          example: "XXXX"
+        d:
+          type: "d"
+          example: "XXXX"
+        machine:
+          type: "machine"
+          example: "XXXX"
+        
+
+
+responses:
+  201:
+    description: When a data insert success
+

@@ -1,0 +1,23 @@
+Calculate_Bavia_Productivity_Today
+---
+tags:
+  - Calculate_Bavia_Productivity_Today
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Worker_Code"
+      properties:
+        Worker_Code:
+          type: "Worker_Code"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

@@ -1,0 +1,31 @@
+Update_Data_TV_DB_V3
+---
+tags:
+  - Update_Data_TV_DB_V3
+parameters:
+  - name: body
+    description: The body should contain the update data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "newresult"
+        - "dmcproduct"
+        
+      properties:
+        newresult:
+          type: "newresult"
+          example: "XXXX"
+        dmcproduct:
+          type: "dmcproduct"
+          example: "XXXX"
+        
+
+
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

@@ -1,0 +1,15 @@
+/show1/{Machine}:
+get:
+tags:
+  - Search
+parameters:
+  - in: path
+    name: Machine
+    required: true
+
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

@@ -1,0 +1,96 @@
+Save_TiltMeasurement
+---
+tags:
+  - Save_TiltMeasurement
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "ID_Operator"
+        - "MachineNo"
+        - "productname"
+        - "QR_tray"
+        - "DMC"
+        - "Time_start"
+        - "Time_finish"
+        - "Total_deviation"
+        - "Distance"
+        - "Angle"
+        - "H1"
+        - "H2"
+        - "H3"
+        - "H4"
+        - "H5"
+        - "Result"
+        - "Status"
+        - "Picture"
+        - "Note"
+      properties:
+        ID_Operator:
+          type: "ID_Operator"
+          example: "XXXX"
+        MachineNo:
+          type: "MachineNo"
+          example: "XXXX"
+        productname:
+          type: "productname"
+          example: "XXXX"
+        QR_tray:
+          type: "QR_tray"
+          example: "XXXX"
+        DMC:
+          type: "DMC"
+          example: "XXXX"
+        Time_start:
+          type: "Time_start"
+          example: "yyyy-mm-dd hh:mm:ss"
+        Time_finish:
+          type: "Time_finish"
+          example: "yyyy-mm-dd hh:mm:ss"
+        Total_deviation:
+          type: "Total_deviation"
+          example: "XXXX"
+        Distance:
+          type: "Distance"
+          example: "XXXX"
+        Angle:
+          type: "Angle"
+          example: "XXXX"
+        H1:
+          type: "H1"
+          example: "XXXX"
+        H2:
+          type: "H2"
+          example: "XXXX"
+        H3:
+          type: "H3"
+          example: "XXXX"
+        H4:
+          type: "H4"
+          example: "XXXX"
+        H5:
+          type: "H5"
+          example: "XXXX"
+        Result:
+          type: "Result"
+          example: "XXXX"
+        Status:
+          type: "Status"
+          example: "XXXX"
+        Picture:
+          type: "Picture"
+          example: "XXXX"
+        Note:
+          type: "Note"
+          example: "XXXX"
+        
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

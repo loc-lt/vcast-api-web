@@ -1,0 +1,51 @@
+Insert_Quantity_Daily
+---
+tags:
+  - Insert_Quantity_Daily
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Worker_Code"   
+        - "Process"
+        - "Line_No"
+        - "Date"
+        - "Quantity"
+        - "NG"
+        - "Bonus"
+        - "Function_Code"
+      properties:
+        Worker_Code:
+          type: "Worker_Code"
+          example: XXXXXXXX"
+        Process:
+          type: "Process"
+          example: "XXXXXXXX"
+        Line_No:
+          type: "Line_No"
+          example: "XXXXXXXX" 
+        Date:
+          type: "Date"
+          example: "yyyy-mm-dd"
+        Quantity:
+          type: "Quantity"
+          example: "XXXXXXXX"
+        NG:
+          type: "NG"
+          example: "XXXXXXXX"
+        Bonus:
+          type: "Bonus"
+          example: "XXXXXXXX"
+        Function_Code:
+          type: "Function_Code"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

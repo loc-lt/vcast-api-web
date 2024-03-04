@@ -1,0 +1,35 @@
+Update_Data_TV_DB_V12
+---
+tags:
+  - Update_Data_TV_DB_V12
+parameters:
+  - name: body
+    description: The body should contain the update data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "number1"
+        - "b"
+        - "machine"
+        
+      properties:
+        number1:
+          type: "number1"
+          example: "XXXX"
+        b:
+          type: "b"
+          example: "XXXX"
+        machine:
+          type: "machine"
+          example: "XXXX"
+        
+
+
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

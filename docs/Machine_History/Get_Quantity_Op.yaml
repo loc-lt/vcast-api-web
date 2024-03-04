@@ -1,0 +1,35 @@
+Get_Quantity_Op
+---
+tags:
+  - Get_Quantity_Op
+parameters:
+  - name: body
+    description: The body should contain the show count result
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "timein"
+        - "timeout"
+        - "manv"
+        - "line"
+      properties:
+        timein:
+          type: "timein"
+          example: "XXXX"
+        timeout:
+          type: "timeout"
+          example: "XXXX"
+        manv:
+          type: "manv"
+          example: "XXXX"
+        line:
+          type: "line"
+          example: "XXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

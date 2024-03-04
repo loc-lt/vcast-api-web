@@ -1,0 +1,9 @@
+GET Count CMM
+---
+tags:
+  - Get_Count_CMM
+responses:
+  200:
+    description: return data Count_CMM
+  400:
+    description: not found

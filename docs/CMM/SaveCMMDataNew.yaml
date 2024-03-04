@@ -1,0 +1,95 @@
+Save_Data_CMM_New
+---
+tags:
+  - Save_Data_CMM_New
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "DMC"
+        - "TimeStart"
+        - "TimeSave"
+        - "Product"
+        - "Line"
+        - "CMMCode"
+        - "CMMmachine"
+        - "Operator"
+        - "CodePurpose"
+        - "MassProduction"
+        - "ID"
+        - "Actual"
+        - "Nominal"
+        - "Uppertol"
+        - "Lowertol"
+        - "Deviation"
+        - "Exceed"
+        - "Result"
+        - "Requester"
+      properties:
+        DMC:
+          type: "DMC"
+          example: "XXXX"
+        TimeStart:
+          type: "TimeStart"
+          example: "XXXX"
+        TimeSave:
+          type: "TimeSave"
+          example: "XXXX"
+        Product:
+          type: "Product"
+          example: "XXXX"
+        Line:
+          type: "Line"
+          example: "XXXX"
+        CMMCode:
+          type: "CMMCode"
+          example: "XXXX"
+        CMMmachine:
+          type: "CMMmachine"
+          example: "XXXX"
+        Operator:
+          type: "Operator"
+          example: "XXXX"
+        CodePurpose:
+          type: "CodePurpose"
+          example: "XXXX"
+        MassProduction:
+          type: "MassProduction"
+          example: "XXXX"
+        ID:
+          type: "ID"
+          example: "XXXX"
+        Actual:
+          type: "Actual"
+          example: "XXXX"
+        Nominal:
+          type: "Nominal"
+          example: "XXXX"
+        Uppertol:
+          type: "Uppertol"
+          example: "XXXX"
+        Lowertol:
+          type: "Lowertol"
+          example: "XXXX"
+        Deviation:
+          type: "Deviation"
+          example: "XXXX"
+        Exceed:
+          type: "Exceed"
+          example: "XXXX"
+        Result:
+          type: "Result"
+          example: "XXXX"
+        Requester:
+          type: "Requester"
+          example: "XXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

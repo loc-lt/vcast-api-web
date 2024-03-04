@@ -1,0 +1,23 @@
+Type_error
+---
+tags:
+  - Type_error
+parameters:
+  - name: body
+    description: The body should contain the insert data DMC_NG
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Status_error"
+      properties:
+        Status_error:
+          type: "Status_error"
+          example: "XXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

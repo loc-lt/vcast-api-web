@@ -1,0 +1,55 @@
+SET_DATA_CNC
+---
+tags:
+  - insertdata
+parameters:
+  - name: body
+    description: The body should contain the set data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Machineno"
+        - "Pos_product"
+        - "Name_product"
+        - "DMC_Fixture"
+        - "DMC_product"
+        - "Position1"
+        - "TimeinCNC1"
+        - "TimeoutCNC1"
+        - "StatusDMC"
+      properties:
+        Machineno:
+          type: "Machineno"
+          example: "SET"
+        Pos_product:
+          type: "Pos_product"
+          example: "A"
+        Name_product:
+          type: "Name_product"
+          example: "A2012003TQ"
+        DMC_Fixture:
+          type: "DMC_Fixture"
+          example: "XXXX"
+        DMC_product:
+          type: "DMC_product"
+          example: "XXXX"
+        Position1:
+          type: "Position1"
+          example: "OP1"
+        TimeinCNC1:
+          type: "TimeinCNC1"
+          example: "yyyy-mm-dd hh:mm:ss"
+        TimeoutCNC1:
+            type: "TimeoutCNC1"
+            example: "yyyy-mm-dd hh:mm:ss"
+        StatusDMC:
+          type: "StatusDMC"
+          example: "error"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

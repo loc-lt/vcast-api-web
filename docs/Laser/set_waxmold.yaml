@@ -1,0 +1,27 @@
+SET_SERIAL_LASER
+---
+tags:
+  - set_waxmold
+parameters:
+  - name: body
+    description: The body should contain the set data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "NameProduct"
+        - "Waxmold"
+      properties:
+        NameProduct:
+          type: "NameProduct"
+          example: "A2012003TQ"
+        Waxmold:
+          type: "Waxmold"
+          example: "10"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

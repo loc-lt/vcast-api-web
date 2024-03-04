@@ -1,0 +1,47 @@
+SAVE_DATA_DONGBIN
+---
+tags:
+  - DATA_DONGBIN
+parameters:
+  - name: body
+    description: The body should contain the set data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Machineno"
+        - "DMC_product"
+        - "MotorCurrent"
+        - "Position"
+        - "TimeStart"
+        - "TimeFinish"
+        - "Result"
+      properties:
+        Machineno:
+          type: "Machineno"
+          example: "SET"
+        DMC_product:
+          type: "DMC_product"
+          example: "A"
+        MotorCurrent:
+          type: "MotorCurrent"
+          example: "A2012003TQ"
+        Position:
+          type: "Position"
+          example: "XXXX"
+        TimeStart:
+          type: "TimeStart"
+          example: "XXXX"
+        TimeFinish:
+          type: "TimeFinish"
+          example: "OP1"
+        Result:
+          type: "Result"
+          example: "yyyy-mm-dd hh:mm:ss"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

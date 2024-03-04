@@ -1,0 +1,75 @@
+Save_Data_To_NG_Products_History_Repair
+---
+tags:
+  - Save_Data_To_NG_Products_History_Repair
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Manager_Code"
+        - "Worker_Code"
+        - "Worker_Name"
+        - "Product_Code"
+        - "Error_Code"
+        - "Error_Detail"
+        - "Error_Position"
+        - "Line_No"
+        - "Num_Subtraction"
+        - "Time_Error"
+        - "CNCOrQC"
+        - "Product_Type"
+        - "Error_Location"
+        - "Date_Shift"
+      properties:
+        Manager_Code:
+          type: "Manager_Code"
+          example: "XXXXXXXX"
+        Worker_Code:
+          type: "Worker_Code"
+          example: "XXXXXXXX"
+        Worker_Name:
+          type: "Worker_Name"
+          example: "XXXXXXXX"
+        Product_Code:
+          type: "Product_Code"
+          example: "XXXXXXXX"
+        Error_Code:
+          type: "Error_Code"
+          example: "XXXXXXXX"
+        Error_Detail:
+          type: "Error_Detail"
+          example: "XXXXXXXX"
+        Error_Position:
+          type: "Error_Position"
+          example: "XXXXXXXX" 
+        Line_No:
+          type: "Line_No"
+          example: "XXXXXXXX" 
+        Num_Subtraction:
+          type: "Num_Subtraction"
+          example: "XXXXXXXX"
+        Time_Error:
+          type: "Time_Error"
+          example: "XXXXXXXX"
+        CNCOrQC:
+          type: "CNCOrQC"
+          example: "XXXXXXXX"
+        Product_Type:
+          type: "Product_Type"
+          example: "XXXXXXXX"
+        Error_Location:
+          type: "Error_Location"
+          example: "XXXXXXXX"
+        Date_Shift:
+          type: "Date_Shift"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

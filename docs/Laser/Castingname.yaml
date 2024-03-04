@@ -1,0 +1,14 @@
+/Check_castingname/<Password>:
+get:
+tags:
+  - Check_castingname
+parameters:
+  - in: path
+    name: Castingname
+    required: true
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

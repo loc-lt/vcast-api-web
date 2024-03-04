@@ -1,0 +1,23 @@
+Insert_Manager_History_Data
+---
+tags:
+  - Insert_Manager_History_Data
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Manager_Code"
+      properties:
+        Manager_Code:
+          type: "Manager_Code"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

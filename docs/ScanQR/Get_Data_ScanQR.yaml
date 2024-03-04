@@ -1,0 +1,14 @@
+/get_Data_ScanQR/{DMC_Product}:
+get:
+tags:
+  - Data_ScanQR
+parameters:
+  - in: path
+    name: DMC_Product
+    required: true
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

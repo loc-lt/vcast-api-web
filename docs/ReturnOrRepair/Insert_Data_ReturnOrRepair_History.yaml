@@ -1,0 +1,39 @@
+Insert_Data_ReturnOrRepair_History
+---
+tags:
+  - Insert_Data_ReturnOrRepair_History
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "CNC_Or_QC"
+        - "Product_Code"
+        - "Error_Code"
+        - "Can_Fix"
+        - "Stage"
+      properties:
+        CNC_Or_QC:
+          type: "CNC_Or_QC"
+          example: XXXXXXXX"
+        Product_Code:
+          type: "Product_Code"
+          example: "XXXXXXXX"
+        Error_Code:
+          type: "Error_Code"
+          example: "XXXXXXXX"
+        Can_Fix:
+          type: "Can_Fix"
+          example: "XXXXXXXX" 
+        Stage:
+          type: "Stage"
+          example: "XXXXXXXX"      
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

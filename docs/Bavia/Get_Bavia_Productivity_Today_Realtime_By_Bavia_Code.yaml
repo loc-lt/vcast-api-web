@@ -1,0 +1,17 @@
+Get_Bavia_Productivity_Today_Realtime_By_Bavia_Code
+---
+tags:
+  - Get_Bavia_Productivity_Today_Realtime_By_Bavia_Code
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

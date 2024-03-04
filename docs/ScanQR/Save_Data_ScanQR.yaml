@@ -1,0 +1,43 @@
+Save_Data_ScanQR
+---
+tags:
+  - InsertDataScanQR
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Product"
+        - "Time_scan_product"
+        - "Time_scan_tray"
+        - "DMC_product"
+        - "DMC_tray"
+        - "Compare"
+      properties:
+        Product:
+          type: "Product"
+          example: "MAN-XXXXXXXX"
+        Time_scan_product:
+          type: "Time_scan_product"
+          example: "yyyy-mm-dd hh:mm:ss"
+        Time_scan_tray:
+          type: "Time_scan_tray"
+          example: "yyyy-mm-dd hh:mm:ss"
+        DMC_product:
+          type: "DMC_product"
+          example: "MAN-XXXXXXXX"
+        DMC_tray:
+          type: "DMC_tray"
+          example: "MAN-XXXXXXXX"
+        Compare:
+          type: "Compare"
+          example: "AAAA"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

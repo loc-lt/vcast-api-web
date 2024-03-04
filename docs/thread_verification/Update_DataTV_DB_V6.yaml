@@ -1,0 +1,33 @@
+Update_Data_TV_DB_V6
+---
+tags:
+  - Update_Data_TV_DB_V6
+parameters:
+  - name: body
+    description: The body should contain the update data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "dmc_2d"
+        - "typepr"
+        
+        
+      properties:
+        dmc_2d:
+          type: "dmc_2d"
+          example: "XXXX"
+        typepr:
+          type: "typepr"
+          example: "XXXX"
+        
+        
+
+
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

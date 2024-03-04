@@ -1,0 +1,9 @@
+GET show about Airtight
+---
+tags:
+  - GET_ALL
+responses:
+  200:
+    description: return data table airtight
+  400:
+    description: not found

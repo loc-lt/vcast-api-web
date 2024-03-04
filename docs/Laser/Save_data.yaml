@@ -1,0 +1,119 @@
+Save_Data
+---
+tags:
+  - Save_Data
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - 'MODE'
+        - "MachineNo"
+        - "NameOperator"
+        - "NameProduct"
+        - "DMCin"
+        - "TimeInDMC"
+        - "TimeOutDMC"
+        - "DMCout"
+        - "TimeOutBarcode"
+        - "DMCRework"
+        - "Result"
+        - "Quality"
+        - "Status"
+        - "Decode"
+        - "Symbol_Contrast"
+        - "Modulation"
+        - "Reflectance_Margin"
+        - "Fixed_Pattern_Damage"
+        - "Format_Info_Damage"
+        - "Version_Info_Damage"
+        - "Axial_Nonuniformity"
+        - "Grid_Nonuniformity"
+        - "Unused_Err_Correction"
+        - "Print_Growth_Horizontal"
+        - "Print_Growth_Vertical"
+      properties:
+        MODE:
+          type: "MODE"
+          example: "XXXX"
+        MachineNo:
+          type: "MachineNo"
+          example: "XXXX"
+        NameOperator:
+          type: "NameOperator"
+          example: "XXXX"
+        NameProduct:
+          type: "NameProduct"
+          example: "XXXX"
+        DMCin:
+          type: "XXXX"
+          example: "0"
+        TimeInDMC:
+          type: "TimeInDMC"
+          example: "yyyy-mm-dd hh:mm:ss"
+        TimeOutDMC:
+          type: "TimeOutDMC"
+          example: "yyyy-mm-dd hh:mm:ss"
+        DMCout:
+          type: "DMCout"
+          example: "XXXX"
+        TimeOutBarcode:
+          type: "TimeOutBarcode"
+          example: "yyyy-mm-dd hh:mm:ss"
+        DMCRework:
+          type: "DMCRework"
+          example: "XXXX"
+        Result:
+            type: "Result"
+            example: "XXXX"
+        Quality:
+            type: "Quality"
+            example: "XXXX"
+        Status:
+          type: "Status"
+          example: "XXXX"
+        Decode:
+            type: "Decode"
+            example: "XXXX"
+        Symbol_Contrast:
+            type: "Symbol_Contrast"
+            example: "yyyy-mm-dd hh:mm:ss"
+        Modulation:
+            type: "Modulation"
+            example: "XXXX"
+        Reflectance_Margin:
+            type: "Reflectance_Margin"
+            example: "XXXX"
+        Fixed_Pattern_Damage:
+          type: "Fixed_Pattern_Damage"
+          example: "XXXX"
+        Format_Info_Damage:
+          type: "Format_Info_Damage"
+          example: "XXXX"
+        Version_Info_Damage:
+          type: "Version_Info_Damage"
+          example: "XXXX"
+        Axial_Nonuniformity:
+          type: "Axial_Nonuniformity"
+          example: "XXXX"
+        Grid_Nonuniformity:
+          type: "Grid_Nonuniformity"
+          example: "XXXX"
+        Unused_Err_Correction:
+          type: "Reflectance_Margin"
+          example: "XXXX"
+        Print_Growth_Horizontal:
+          type: "Print_Growth_Horizontal"
+          example: "XXXX"
+        Print_Growth_Vertical:
+            type: "Print_Growth_Vertical"
+            example: "XXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

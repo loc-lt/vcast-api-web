@@ -1,0 +1,105 @@
+Save_ThreadVerification
+---
+tags:
+  - Save_ThreadVerification
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "OP_name"
+        - "Machine"
+        - "DMC_product"
+        - "Timestart"
+        - "Timefinish"
+        - "Quality"
+        - "Status"
+        - "Thread_gauge_code"
+        - "Life_time"
+        - "Note_life_time"
+        - "Torque_H1"
+        - "Torque_H2"
+        - "Torque_H3"
+        - "Torque_H4"
+        - "Torque_H5"
+        - "Torque_H6"
+        - "Torque_H7"
+        - "Torque_H8"
+        - "Torque_H9"
+        - "Torque_H10"
+        - "Torque_H11"
+      properties:
+        OP_name:
+          type: "OP_name"
+          example: "XXXX"
+        Machine:
+          type: "Machine"
+          example: "XXXX"
+        DMC_product:
+          type: "DMC_product"
+          example: "XXXX"
+        Timestart:
+          type: "Timestart"
+          example: "yyyy-mm-dd hh:mm:ss"
+        Timefinish:
+          type: "Timefinish"
+          example: "yyyy-mm-dd hh:mm:ss"
+        Quality:
+          type: "Quality"
+          example: "XXXX"
+        Status:
+          type: "Status"
+          example: "XXXX"
+        Thread_gauge_code:
+          type: "Thread_gauge_code"
+          example: "XXXX"
+        Life_time:
+          type: "Life_time"
+          example: "XXXX"
+        Note_life_time:
+          type: "Note_life_time"
+          example: "XXXX"
+        Torque_H1:
+            type: "Torque_H1"
+            example: "XXXX"
+        Torque_H2:
+            type: "Torque_H2"
+            example: "XXXX"
+        Torque_H3:
+          type: "Torque_H3"
+          example: "XXXX"
+        Torque_H4:
+            type: "Torque_H4"
+            example: "XXXX"
+        Torque_H5:
+            type: "Torque_H5"
+            example: "XXXX"
+        Torque_H6:
+            type: "Torque_H6"
+            example: "XXXX"
+        Torque_H7:
+            type: "Torque_H7"
+            example: "XXXX"
+        Torque_H8:
+          type: "Torque_H8"
+          example: "XXXX"
+        Torque_H9:
+          type: "Torque_H9"
+          example: "XXXX"
+        Torque_H10:
+          type: "Torque_H10"
+          example: "XXXX"
+        Torque_H11:
+          type: "Torque_H11"
+          example: "XXXX"
+
+
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

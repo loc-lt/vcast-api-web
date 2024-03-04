@@ -1,0 +1,78 @@
+SAVE_DATA_TEMP_COATING
+---
+tags:
+  - InsertTemp_coating
+parameters:
+  - name: body
+    description: The body should contain the set data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Time_get"
+        - "Temperature1"
+        - "Humidity1"
+        - "Temperature2"
+        - "Humidity2"
+        - "Temperature3"
+        - "Humidity3"
+        - "Temperature4"
+        - "Humidity4"
+        - "Temperature5"
+        - "Humidity5"
+        - "Temperature6"
+        - "Humidity6"
+        - "average_temp1"
+        - "average_humid1"
+        - "Coating"
+      properties:
+        Coating:
+          type: "Coating"
+          example: "yyyy-mm-dd"
+        Time_get:
+          type: "Time_get"
+          example: "yyyy-mm-dd"
+        Temperature1:
+          type: "Temperature1"
+          example: "XXXX"
+        Humidity1:
+          type: "Humidity1"
+          example: "XXXX"
+        Temperature2:
+          type: "Temperature2"
+          example: "XXXX"
+        Humidity2:
+            type: "Humidity2"
+            example: "XXXX"
+        Temperature3:
+          type: "Temperature3"
+          example: "XXXX"
+        Humidity3:
+            type: "Humidity3"
+            example: "XXXX"
+        Temperature4:
+          type: "Temperature4"
+          example: "XXXX"
+        Humidity4:
+            type: "Humidity4"
+            example: "XXXX"
+        Temperature5:
+          type: "Temperature5"
+          example: "XXXX"
+        Humidity5:
+            type: "Humidity5"
+            example: "XXXX"
+        average_temp1:
+          type: "average_temp1"
+          example: "XXXX"
+        average_humid1:
+          type: "average_humid1"
+          example: "XXXX"
+
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

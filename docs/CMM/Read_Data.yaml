@@ -1,0 +1,27 @@
+Read_Data
+---
+tags:
+  - Read_Data
+parameters:
+  - name: body
+    description: The body should contain the Read_Data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "DMC"
+        - "id"
+      properties:
+        DMC:
+          type: "DMC"
+          example: "MAN-XXXXXXXX"
+        id:
+          type: "id"
+          example: "MAN-XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

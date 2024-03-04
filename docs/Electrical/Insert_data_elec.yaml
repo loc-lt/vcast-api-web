@@ -1,0 +1,75 @@
+Insert  data Electric
+---
+tags:
+  - Data insert Electric
+parameters:
+  - name: body
+    description: The body should contain the Insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Area"
+        - "Time_get"
+        - "Voltage"
+        - "Current"
+        - "Power"
+        - "PowerF"
+        - "TimeFinish"
+        - "Cost"
+        - "Ua"
+        - "Ub"
+        - "Uc"
+        - "Ia"
+        - "Ib"
+        - "Ic"
+      properties:
+        Area:
+          type: "Area"
+          example: "SET"
+        Time_get:
+          type: "Time_get"
+          example: "SET"
+        Voltage:
+          type: "Voltage"
+          example: "123"
+        Current:
+          type: "Current"
+          example: "123"
+        Power:
+          type: "Power"
+          example: "123"
+        PowerF:
+          type: "PowerF"
+          example: "123"
+        Total:
+          type: "Total"
+          example: "123"
+        Cost:
+          type: "Cost"
+          example: "123"
+        Uab:
+          type: "Uab"
+          example: "123"
+        Ubc:
+          type: "Ubc"
+          example: "123"
+        Uca:
+          type: "Uca"
+          example: "123"
+        Ia:
+          type: "Ia"
+          example: "123"
+        Ib:
+          type: "Ib"
+          example: "123"
+        Ic:
+          type: "Ic"
+          example: "123"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

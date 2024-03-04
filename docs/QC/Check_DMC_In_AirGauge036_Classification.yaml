@@ -1,0 +1,23 @@
+Check_DMC_In_AirGauge036_Classification
+---
+tags:
+  - Check_DMC_In_AirGauge036_Classification
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "DMC"
+      properties:
+        DMC:
+          type: "DMC"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

@@ -1,0 +1,119 @@
+Insert_Data_Into_AirGauge036_Repair
+---
+tags:
+  - Insert_Data_Into_AirGauge036_Repair
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Machine"
+        - "Product_Name"
+        - "Time_ScanDMC"
+        - "TimeFinish"
+        - "Furnace"
+        - "DMC"
+        - "MachiningStation"
+        - "Operator"
+        - "P6_Min"
+        - "P6_Max"
+        - "P10_1_Min"
+        - "P10_1_Max"
+        - "P10_2_Min"
+        - "P10_2_Max"
+        - "P13_Min"
+        - "P13_Max"
+        - "P18_1_Min"
+        - "P18_1_Max"
+        - "P18_2_Min"
+        - "P18_2_Max"
+        - "P53_Min"
+        - "P53_Max"
+        - "Result"
+        - "Pin_Ring"
+        - "Note"
+      properties:
+        Machine:
+          type: "Machine"
+          example: XXXXXXXX"
+        Product_Name:
+          type: "Product_Name"
+          example: "XXXXXXXX"
+        Time_ScanDMC:
+          type: "Time_ScanDMC"
+          example: "XXXXXXXX"
+        TimeFinish:
+          type: "TimeFinish"
+          example: "XXXXXXXX"
+        Furnace:
+          type: "Furnace"
+          example: "XXXXXXXX"
+        DMC:
+          type: "DMC"
+          example: "XXXXXXXX"
+        MachiningStation:
+          type: "MachiningStation"
+          example: "XXXXXXXX"
+        Operator:
+          type: "Operator"
+          example: "XXXXXXXX"
+        P6_Min:
+          type: "P6_Min"
+          example: "XXXXXXXX"
+        P6_Max:
+          type: "P6_Max"
+          example: "XXXXXXXX"
+        P10_1_Min:
+          type: "P10_1_Min"
+          example: "XXXXXXXX"
+        P10_1_Max:
+          type: "P10_1_Max"
+          example: "XXXXXXXX"
+        P10_2_Min:
+          type: "P10_2_Min"
+          example: "XXXXXXXX"
+        P10_2_Max:
+          type: "P10_2_Max"
+          example: "XXXXXXXX"
+        P13_Min:
+          type: "P13_Min"
+          example: "XXXXXXXX"
+        P13_Max:
+          type: "P13_Max"
+          example: "XXXXXXXX"
+        P18_1_Min:
+          type: "P18_1_Min"
+          example: "XXXXXXXX"
+        P18_1_Max:
+          type: "P18_1_Max"
+          example: "XXXXXXXX"
+        P18_2_Min:
+          type: "P18_2_Min"
+          example: "XXXXXXXX"
+        P18_2_Max:
+          type: "P18_2_Max"
+          example: "XXXXXXXX"
+        P53_Min:
+          type: "P53_Min"
+          example: "XXXXXXXX"
+        P53_Max:
+          type: "P53_Max"
+          example: "XXXXXXXX"
+        Result:
+          type: "Result"
+          example: "XXXXXXXX"
+        Pin_Ring:
+          type: "Pin_Ring"
+          example: "XXXXXXXX"
+        Note:
+          type: "Note"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

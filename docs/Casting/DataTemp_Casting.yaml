@@ -1,0 +1,43 @@
+SAVE_DATA_TEMP_CASTING
+---
+tags:
+  - inserttempcasting
+parameters:
+  - name: body
+    description: The body should contain the set data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Time_get"
+        - "Temp_settingA"
+        - "Temp_presentA"
+        - "Temp_settingB"
+        - "Temp_presentB"
+        - "Status"
+      properties:
+        Time_get:
+          type: "Time_get"
+          example: "yyyy-mm-dd"
+        Temp_settingA:
+          type: "Temp_settingA"
+          example: "XXXX"
+        Temp_presentA:
+          type: "Temp_presentA"
+          example: "XXXX"
+        Temp_settingB:
+          type: "Temp_settingB"
+          example: "XXXX"
+        Temp_presentB:
+          type: "Temp_presentB"
+          example: "XXXX"
+        Status:
+          type: "Status"
+          example: "XXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

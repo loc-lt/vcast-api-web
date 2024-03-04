@@ -1,0 +1,31 @@
+Result_history_Laser
+---
+tags:
+  - Laser_result_history
+parameters:
+  - name: body
+    description: The body should contain the show data result
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "MachineNo"
+        - "NameProduct"
+        - "Result"
+      properties:
+        MachineNo:
+          type: "MachineNo"
+          example: "XXXX"
+        NameProduct:
+          type: "NameProduct"
+          example: "XXXX"
+        Result:
+          type: "Result"
+          example: "XXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

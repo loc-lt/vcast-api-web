@@ -1,0 +1,47 @@
+Insert_Data_Into_AirGauge036_Classification
+---
+tags:
+  - Insert_Data_Into_AirGauge036_Classification
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "TimeDMC"
+        - "CodeFurnace"
+        - "DMC"
+        - "OK_NG"
+        - "DrawID"
+        - "ErrorDetail"
+        - "ErrorDetail"
+      properties:
+        TimeDMC:
+          type: "TimeDMC"
+          example: XXXXXXXX"
+        CodeFurnace:
+          type: "CodeFurnace"
+          example: "XXXXXXXX"
+        DMC:
+          type: "DMC"
+          example: "XXXXXXXX"
+        PalletCode:
+          type: "PalletCode"
+          example: "XXXXXXXX"
+        DrawID:
+          type: "DrawID"
+          example: "XXXXXXXX"
+        DrawVersion:
+          type: "DrawVersion"
+          example: "XXXXXXXX"
+        Num:
+          type: "Num"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

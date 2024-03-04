@@ -1,0 +1,247 @@
+SaveDATA_CMM
+---
+tags:
+  - SaveDATA_CMM
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "DMC"
+        - "TimeSave"
+        - "Product"
+        - "Line"
+        - "CMMmachine"
+        - "Operator"
+        - "CodePurpose"
+        - "MassProduction"
+        - "planid"
+        - "partnb"
+        - "id"
+        - "type"
+        - "idsymbol"
+        - "actual"
+        - "nominal"
+        - "uppertol"
+        - "lowertol"
+        - "deviation"
+        - "exceed"
+        - "warningLimitCF"
+        - "featureid"
+        - "featuresigma"
+        - "comment"
+        - "link"
+        - "linkmode"
+        - "mmc"
+        - "useruppertol"
+        - "userlowertol"
+        - "fftphi"
+        - "fftphiunit"
+        - "zoneroundnessangle"
+        - "groupname"
+        - "groupname2"
+        - "datumAid"
+        - "datumBid"
+        - "datumCid"
+        - "natuppertolid"
+        - "natlowertolid"
+        - "decimalplaces"
+        - "featurePosX"
+        - "featurePosY"
+        - "featurePosZ"
+        - "unit"
+        - "group1"
+        - "group2"
+        - "group3"
+        - "group4"
+        - "group5"
+        - "group6"
+        - "group7"
+        - "group8"
+        - "group9"
+        - "group10"
+        - "Result"
+        - "CMMCode"
+        - "TimeStart"
+        - "Requester"
+      properties:
+        DMC:
+          type: "DMC"
+          example: "yyyy-mm-dd hh:mm:ss"
+        TimeSave:
+          type: "TimeSave"
+          example: "XXXX"
+        Product:
+          type: "Product"
+          example: "XXXX"
+        Line:
+          type: "Line"
+          example: "XXXX"
+        CMMmachine:
+          type: "CMMmachine"
+          example: "XXXX"
+        Operator:
+          type: "Operator"
+          example: "XXXX"
+        CodePurpose:
+          type: "CodePurpose"
+          example: "XXXX"
+        MassProduction:
+          type: "MassProduction"
+          example: "XXXX"
+        planid:
+          type: "planid"
+          example: "XXXX"
+        partnb:
+          type: "partnb"
+          example: "XXXX"
+        id:
+          type: "id"
+          example: "XXXX"
+        Type:
+          type: "Type"
+          example: "XXXX"
+        idsymbol:
+          type: "idsymbol"
+          example: "XXXX"
+        actual:
+          type: "actual"
+          example: "yyyy-mm-dd hh:mm:ss"
+        nominal:
+          type: "nominal"
+          example: "XXXX"
+        uppertol:
+          type: "uppertol"
+          example: "XXXX"
+        lowertol:
+          type: "lowertol"
+          example: "XXXX"
+        deviation:
+          type: "deviation"
+          example: "XXXX"
+        exceed:
+          type: "exceed"
+          example: "XXXX"
+        warningLimitCF:
+          type: "warningLimitCF"
+          example: "XXXX"
+        featureid:
+          type: "featureid"
+          example: "XXXX"
+        featuresigma:
+          type: "featuresigma"
+          example: "XXXX"
+        comment:
+          type: "comment"
+          example: "XXXX"
+        link:
+          type: "link"
+          example: "XXXX"
+        linkmode:
+          type: "linkmode"
+          example: "XXXX"
+        mmc:
+          type: "mmc"
+          example: "XXXX"
+        useruppertol:
+          type: "useruppertol"
+          example: "yyyy-mm-dd hh:mm:ss"
+        userlowertol:
+          type: "userlowertol"
+          example: "XXXX"
+        fftphi:
+          type: "fftphi"
+          example: "XXXX"
+        fftphiunit:
+          type: "fftphiunit"
+          example: "XXXX"
+        zoneroundnessangle:
+          type: "zoneroundnessangle"
+          example: "XXXX"
+        groupname:
+          type: "groupname"
+          example: "XXXX"
+        groupname2:
+          type: "groupname2"
+          example: "XXXX"
+        datumAid:
+          type: "datumAid"
+          example: "XXXX"
+        datumBid:
+          type: "datumBid"
+          example: "XXXX"
+        datumCid:
+          type: "datumCid"
+          example: "XXXX"
+        natuppertolid:
+          type: "natuppertolid"
+          example: "XXXX"
+        natlowertolid:
+          type: "natlowertolid"
+          example: "XXXX"
+        decimalplaces:
+          type: "decimalplaces"
+          example: "XXXX"
+        featurePosX:
+          type: "featurePosX"
+          example: "yyyy-mm-dd hh:mm:ss"
+        featurePosY:
+          type: "featurePosY"
+          example: "XXXX"
+        featurePosZ:
+          type: "featurePosZ"
+          example: "XXXX"
+        unit:
+          type: "unit"
+          example: "XXXX"
+        group1:
+          type: "group1"
+          example: "XXXX"
+        group2:
+          type: "group2"
+          example: "XXXX"
+        group3:
+          type: "group3"
+          example: "XXXX"
+        group4:
+          type: "group4"
+          example: "XXXX"
+        group5:
+          type: "group5"
+          example: "XXXX"
+        group6:
+          type: "group6"
+          example: "XXXX"
+        group7:
+          type: "group7"
+          example: "XXXX"
+        group8:
+          type: "group8"
+          example: "XXXX"
+        group9:
+          type: "group9"
+          example: "XXXX"
+        group10:
+          type: "group10"
+          example: "XXXX"
+        Result:
+          type: "Result"
+          example: "XXXX"
+        CMMCode:
+          type: "CMMCode"
+          example: "XXXX"
+        TimeStart:
+          type: "TimeStart"
+          example: "XXXX"
+        Requester:
+          type: "Requester"
+          example: "XXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

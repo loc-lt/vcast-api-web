@@ -1,0 +1,31 @@
+Insert_Bavia_Products
+---
+tags:
+  - Insert_Bavia_Products
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Bavia_Code"
+        - "Product_Code"
+        - "Blueprint_Code"
+      properties:
+        Bavia_Code:
+          type: "Bavia_Code"
+          example: "XXXXXXXX"
+        Product_Code:
+          type: "Product_Code"
+          example: "XXXXXXXX"
+        Product_Type:
+          type: "Product_Type"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

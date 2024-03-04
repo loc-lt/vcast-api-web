@@ -1,0 +1,28 @@
+Update_Data_TV_DB_V2
+---
+tags:
+  - Update_Data_TV_DB_V2
+parameters:
+  - name: body
+    description: The body should contain the update data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "column"
+        - "machineno"
+      properties:
+        column:
+          type: "column"
+          example: "1"
+        machineno:
+          type: "machineno"
+          example: "OP1"
+
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

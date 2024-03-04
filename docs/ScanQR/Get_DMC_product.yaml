@@ -1,0 +1,31 @@
+Get_DMC_product
+---
+tags:
+  - Get_DMC_product
+parameters:
+  - name: body
+    description: The body should contain the Get_DMC_product
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Product"
+        - "DMC_tray"
+        - "SET"
+      properties:
+        Product:
+          type: "Product"
+          example: "MAN-XXXXXXXX"
+        DMC_tray:
+          type: "DMC_tray"
+          example: "MAN-XXXXXXXX"
+        SET:
+          type: "SET"
+          example: "MAN-XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

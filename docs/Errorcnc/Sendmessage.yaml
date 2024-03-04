@@ -1,0 +1,31 @@
+SendERRORCNC
+---
+tags:
+  - Send_ERROR_CNC
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "SET"
+        - "MSG"
+        - "POS"
+      properties:
+        SET:
+          type: "SET"
+          example: "123456"
+        MSG:
+          type: "MSG"
+          example: "loc dep trai"
+        POS:
+          type: "POS"
+          example: "A"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

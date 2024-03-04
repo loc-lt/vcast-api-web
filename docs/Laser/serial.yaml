@@ -1,0 +1,15 @@
+/update_serial/{NameProduct}:
+get:
+tags:
+  - get_serial
+parameters:
+  - in: path
+    name: NameProduct
+    required: true
+
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

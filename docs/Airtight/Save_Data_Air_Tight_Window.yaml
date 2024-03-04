@@ -1,0 +1,63 @@
+Save_Data_Air_Tight_Window
+---
+tags:
+  - Save_Data_Air_Tight_Window
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Product_Name"
+        - "Barcode"
+        - "Airvalue_1"
+        - "Status_Position_1"
+        - "Time_Start_1"
+        - "Time_Finish_1"
+        - "Airvalue_2"
+        - "Status_Position_2"
+        - "Time_Start_2"
+        - "Time_Finish_2"
+        - "Note"
+      properties:
+        Product_Name:
+          type: "Product_Name"
+          example: "XXXXXXXX"
+        Barcode:
+          type: "Barcode"
+          example: "XXXXXXXX"
+        Airvalue_1:
+          type: "Airvalue_1"
+          example: "XXXXXXXX"
+        Status_Position_1:
+          type: "Status_Position_1"
+          example: "XXXXXXXX"
+        Time_Start_1:
+          type: "Time_Start_1"
+          example: "XXXXXXXX"
+        Time_Finish_1:
+          type: "Time_Finish_1"
+          example: "XXXXXXXX"
+        Airvalue_2:
+          type: "Airvalue_2"
+          example: "XXXXXXXX"
+        Status_Position_2:
+          type: "Status_Position_2"
+          example: "XXXXXXXX"
+        Time_Start_2:
+          type: "Time_Start_2"
+          example: "XXXXXXXX"
+        Time_Finish_2:
+          type: "Time_Finish_2"
+          example: "XXXXXXXX"
+        Note:
+          type: "Note"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

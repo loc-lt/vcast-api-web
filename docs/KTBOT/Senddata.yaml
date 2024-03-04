@@ -1,0 +1,63 @@
+Sendtelegram
+---
+tags:
+  - Sendtelegram
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Barcode1"
+        - "Barcode2"
+        - "Barcode3"
+        - "Barcode4"
+        - "Barcode5"
+#        - "Barcode6"
+#        - "Barcode7"
+#        - "Barcode8"
+#        - "Barcode9"
+#        - "Barcode10"
+        - "Value"
+      properties:
+        Barcode1:
+          type: "Barcode1"
+          example: "MAN-XXXXXXXX"
+        Barcode2:
+          type: "Barcode2"
+          example: "yyyy-mm-dd hh:mm:ss"
+        Barcode3:
+          type: "Barcode3"
+          example: "yyyy-mm-dd hh:mm:ss"
+        Barcode4:
+          type: "Barcode4"
+          example: "MAN-XXXXXXXX"
+        Barcode5:
+          type: "Barcode5"
+          example: "MAN-XXXXXXXX"
+#        Barcode6:
+#          type: "Barcode6"
+#          example: "AAAA"
+#        Barcode7:
+#          type: "Barcode7"
+#          example: "MAN-XXXXXXXX"
+#        Barcode8:
+#          type: "Barcode8"
+#          example: "yyyy-mm-dd hh:mm:ss"
+#        Barcode9:
+#          type: "Barcode9"
+#          example: "yyyy-mm-dd hh:mm:ss"
+#        Barcode10:
+#          type: "Barcode10"
+#          example: "MAN-XXXXXXXX"
+        Value:
+          type: "Value"
+          example: "MAN-XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

@@ -1,0 +1,55 @@
+Save_Data_Measure_Diameter_GC
+---
+tags:
+  - Insert_Measure_Diameter_GC
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "Product_Name"
+        - "Time_ScanDMC"
+        - "DMC"
+        - "A_Min"
+        - "A_Max"
+        - "B_Min"
+        - "B_Max"
+        - "Time_Finish"
+        - "Result"
+      properties:
+        Product_Name:
+          type: "Product_Name"
+          example: "XXXXXXXX"
+        Time_ScanDMC:
+          type: "Time_ScanDMC"
+          example: "yyyy-mm-dd hh:mm:ss"
+        DMC:
+          type: "DMC"
+          example: "XXXXXXXX"
+        A_Min:
+          type: "A_Min"
+          example: "XXXXXXXX"
+        A_Max:
+          type: "A_Max"
+          example: "XXXXXXXX"
+        B_Min:
+          type: "B_Min"
+          example: "XXXXXXXX"
+        B_Max:
+          type: "Compare"
+          example: "XXXXXXXX"
+        Time_Finish:
+          type: "Time_Finish"
+          example: "XXXXXXXX"
+        Result:
+          type: "Result"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

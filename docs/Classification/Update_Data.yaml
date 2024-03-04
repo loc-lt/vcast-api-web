@@ -1,0 +1,143 @@
+Update_Data_Classification
+---
+tags:
+  - Update_Data_Classification
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "lazer_machine"
+        - "pallet_num"
+        - "Num"
+        - "total_code"
+        - "total_quality"
+        - "dataman_read_matrix_code"
+        - "dataman_total_quality"
+        - "dataman_Decode"
+        - "dataman_Symbol_Contrast"
+        - "dataman_Modulation"
+        - "dataman_Reflectance_Margin"
+        - "dataman_Fixed_Pattern_Damage"
+        - "dataman_Format_Info_Damage"
+        - "dataman_Version_Info_Damage"
+        - "dataman_Axial_Nonuniformity"
+        - "dataman_Grid_Nonuniformity"
+        - "dataman_Unused_Err_Correction"
+        - "dataman_Print_Growth_Horizontal"
+        - "dataman_Print_Growth_Vertical"
+        - "camera_matrix_code"
+        - "camera_pin_1"
+        - "camera_pin_2"
+        - "camera_laser_machine"
+        - "camera_cnc_line_id"
+        - "camera_product_shape"
+        - "camera_dmc_pos_x"
+        - "camera_dmc_pos_y"
+        - "error_code"
+        - "error_detail"
+        - "note"
+      properties:
+        lazer_machine:
+          type: "lazer_machine"
+          example: "XXXX"
+        pallet_num:
+          type: "pallet_num"
+          example: "XXXX"
+        Num:
+          type: "Num"
+          example: "XXXX"
+        dmc_was_replace:
+          type: "dmc_was_replace"
+          example: "XXXX"
+        total_code:
+          type: "total_code"
+          example: "XXXX"
+        total_quality:
+          type: "total_quality"
+          example: "XXXX"
+        dataman_read_matrix_code:
+          type: "dataman_read_matrix_code"
+          example: "XXXX"
+        dataman_total_quality:
+          type: "dataman_total_quality"
+          example: "XXXX"
+        dataman_Decode:
+          type: "dataman_Decode"
+          example: "XXXX"
+        dataman_Symbol_Contrast:
+            type: "dataman_Symbol_Contrast"
+            example: "XXXX"
+        dataman_Modulation:
+            type: "dataman_Modulation"
+            example: "XXXX"
+        dataman_Reflectance_Margin:
+          type: "dataman_Reflectance_Margin"
+          example: "XXXX"
+        dataman_Fixed_Pattern_Damage:
+            type: "dataman_Fixed_Pattern_Damage"
+            example: "XXXX"
+        dataman_Format_Info_Damage:
+            type: "dataman_Format_Info_Damage"
+            example: "XXXX"
+        dataman_Version_Info_Damage:
+            type: "dataman_Version_Info_Damage"
+            example: "XXXX"
+        dataman_Axial_Nonuniformity:
+            type: "dataman_Axial_Nonuniformity"
+            example: "XXXX"
+        dataman_Grid_Nonuniformity:
+          type: "dataman_Grid_Nonuniformity"
+          example: "XXXX"
+        dataman_Unused_Err_Correction:
+          type: "dataman_Unused_Err_Correction"
+          example: "XXXX"
+        dataman_Print_Growth_Horizontal:
+          type: "dataman_Print_Growth_Horizontal"
+          example: "XXXX"
+        dataman_Print_Growth_Vertical:
+          type: "dataman_Print_Growth_Vertical"
+          example: "XXXX"
+        camera_matrix_code:
+          type: "camera_matrix_code"
+          example: "XXXX"
+        camera_pin_1:
+          type: "camera_pin_1"
+          example: "XXXX"
+        camera_pin_2:
+          type: "camera_pin_2"
+          example: "XXXX"
+        camera_laser_machine:
+          type: "camera_laser_machine"
+          example: "XXXX"
+        camera_cnc_line_id:
+          type: "camera_cnc_line_id"
+          example: "XXXX"
+        camera_product_shape:
+          type: "camera_product_shape"
+          example: "XXXX"
+        camera_dmc_pos_x:
+          type: "camera_dmc_pos_x"
+          example: "XXXX"
+        camera_dmc_pos_y:
+          type: "camera_dmc_pos_y"
+          example: "XXXX"
+        error_code:
+            type: "error_code"
+            example: "XXXX"
+        error_detail:
+          type: "error_detail"
+          example: "XXXX"
+        note:
+          type: "note"
+          example: "XXXX"
+
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data
