@@ -1,23 +1,14 @@
-dmc_data
----
+/dmc_data/<string:dmc>:
+get:
 tags:
   - dmc_data
 parameters:
-  - name: body
-    description: The body should contain the insert data
-    in: body
+  - in: path
+    name: dmc
     required: true
-    schema:
-      type: object
-      required:
-        - "dmc"
-      properties:
-        dmc:
-          type: "dmc"
-          example: "xxxxxx"
 responses:
-  201:
-    description: When a data insert success
+  200:
+    description: Redirects to the original link
 
   400:
-    description: Fails to insert due to bad request data
+    description: not found

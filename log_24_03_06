@@ -1,0 +1,114 @@
+-------------------Log----------------24/03/06-09:09:07
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 199, in get_products
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- products
+-------------------Log----------------24/03/06-15:48:10
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\wrappers\request.py", line 586, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\json\__init__.py", line 216, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 868, in get_dmc_data
+    dmc = request.json["dmc"]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\wrappers\request.py", line 553, in json
+    return self.get_json()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\wrappers\request.py", line 595, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\wrappers.py", line 129, in on_json_loading_failed
+    raise BadRequest(f"Failed to decode JSON object: {e}")
+werkzeug.exceptions.BadRequest: 400 Bad Request: Failed to decode JSON object: Expecting value: line 1 column 1 (char 0)
+ ---- dmc_data
+-------------------Log----------------24/03/06-15:48:16
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\wrappers\request.py", line 586, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\json\__init__.py", line 216, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 868, in get_dmc_data
+    dmc = request.json["dmc"]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\wrappers\request.py", line 553, in json
+    return self.get_json()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\wrappers\request.py", line 595, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\wrappers.py", line 129, in on_json_loading_failed
+    raise BadRequest(f"Failed to decode JSON object: {e}")
+werkzeug.exceptions.BadRequest: 400 Bad Request: Failed to decode JSON object: Expecting value: line 1 column 1 (char 0)
+ ---- dmc_data
+-------------------Log----------------24/03/06-15:55:23
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\wrappers\request.py", line 586, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\json\__init__.py", line 216, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 868, in get_dmc_data
+    dmc = request.json["dmc"]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\wrappers\request.py", line 553, in json
+    return self.get_json()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\wrappers\request.py", line 595, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\wrappers.py", line 129, in on_json_loading_failed
+    raise BadRequest(f"Failed to decode JSON object: {e}")
+werkzeug.exceptions.BadRequest: 400 Bad Request: Failed to decode JSON object: Expecting value: line 1 column 1 (char 0)
+ ---- dmc_data
+-------------------Log----------------24/03/06-15:56:00
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\wrappers\request.py", line 586, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\json\__init__.py", line 216, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 868, in get_dmc_data
+    dmc = request.json["dmc"]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\wrappers\request.py", line 553, in json
+    return self.get_json()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\wrappers\request.py", line 595, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\wrappers.py", line 129, in on_json_loading_failed
+    raise BadRequest(f"Failed to decode JSON object: {e}")
+werkzeug.exceptions.BadRequest: 400 Bad Request: Failed to decode JSON object: Expecting value: line 1 column 1 (char 0)
+ ---- dmc_data

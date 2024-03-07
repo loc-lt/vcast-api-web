@@ -587,14 +587,14 @@ def data_details(dmc, datetime):
             idx, time_save, actual, nominal, uppertol, lowertol, unit, result, id = item
             ret["data"] += [{
             "index":idx,
-            "TimeSave":time_save,
-            "Actual":actual,
-            "Nominal":nominal,
-            "Upper":uppertol,
-            "Lower":lowertol,
-            "Unit":unit,
-            "Result":result,
-            "Name":id
+            "timeSave":time_save,
+            "actual":actual,
+            "nominal":nominal,
+            "upper":uppertol,
+            "lower":lowertol,
+            "unit":unit,
+            "result":result,
+            "name":id
         }]   
         
         return jsonify(ret)
@@ -831,7 +831,7 @@ def get_form_manager_detail(form_name):
         ret = {
                 'status':True,
                 'message':'Success',
-                'data': {}
+                'data': []
             }
         
         if len(form_manager_list) == 0:
@@ -841,12 +841,12 @@ def get_form_manager_detail(form_name):
 
         for item in form_manager_list:
             position, circleNum, characteristic, link = item
-            ret["data"][position] = {
+            ret["data"] += [{
                 "position":position,
                 "circleNum":circleNum,
                 "characteristic":characteristic,
                 "link":link
-            }
+            }]
         
         return jsonify(ret)
     except Exception as e:
@@ -857,15 +857,14 @@ def get_form_manager_detail(form_name):
         Systemp_log(traceback.format_exc(), "form_manager").append_new_line()
         return jsonify(ret),500
     
-@CMM.get('/dmc_data') 
+@CMM.get('/dmc_data/<string:dmc>') 
 @swag_from('./docs/CMM/dmc_data.yaml')
-def get_dmc_data():
+def get_dmc_data(dmc):
     try:
         # Tạo cusor để kết nối với database
         conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
         cursor = conn.cursor()
 
-        dmc = request.json["dmc"]
         if dmc =="":
             dmc= "datnon"
 
@@ -886,7 +885,7 @@ def get_dmc_data():
         ret = {
                 'status':True,
                 'message':'Success',
-                'data': {}
+                'data': []
             }
         
         if len(dmc_data_list) == 0:
@@ -896,10 +895,10 @@ def get_dmc_data():
 
         for idx, item in enumerate(dmc_data_list):
             id, actual = item
-            ret["data"][idx] = {
+            ret["data"] += [{
                 "id":id,
                 "actual":actual
-            }
+            }]
         
         return jsonify(ret)
     except Exception as e:

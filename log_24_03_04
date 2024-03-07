@@ -1,0 +1,12 @@
+-------------------Log----------------24/03/04-13:18:34
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 563, in data_details
+    cursor.execute("SELECT IDx, TimeSave, Actual, Nominal, Uppertol, Lowertol, Unit, Result, Id FROM [QC].[dbo].[CMMdata] where DMC = '"+dmc+"' and TimeSave = '"+datetime+"'")
+pyodbc.DataError: ('22007', '[22007] [Microsoft][ODBC SQL Server Driver][SQL Server]The conversion of a varchar data type to a datetime data type resulted in an out-of-range value. (242) (SQLExecDirectW)')
+ ---- data_details
+-------------------Log----------------24/03/04-13:18:51
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 563, in data_details
+    cursor.execute("SELECT IDx, TimeSave, Actual, Nominal, Uppertol, Lowertol, Unit, Result, Id FROM [QC].[dbo].[CMMdata] where DMC = '"+dmc+"' and TimeSave = '"+datetime+"'")
+pyodbc.DataError: ('22007', '[22007] [Microsoft][ODBC SQL Server Driver][SQL Server]The conversion of a varchar data type to a datetime data type resulted in an out-of-range value. (242) (SQLExecDirectW)')
+ ---- data_details
