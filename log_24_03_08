@@ -1,0 +1,60 @@
+-------------------Log----------------24/03/08-13:31:57
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 872, in get_dmc_data
+    cursor.execute("SELECT id, actual FROM [QC].[dbo].[CMMdata] where DMC like '%"+dmc+"%' and  order by IDx")
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near the keyword 'order'. (156) (SQLExecDirectW)")
+ ---- dmc_data
+-------------------Log----------------24/03/08-13:31:59
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 872, in get_dmc_data
+    cursor.execute("SELECT id, actual FROM [QC].[dbo].[CMMdata] where DMC like '%"+dmc+"%' and  order by IDx")
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near the keyword 'order'. (156) (SQLExecDirectW)")
+ ---- dmc_data
+-------------------Log----------------24/03/08-13:31:59
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 872, in get_dmc_data
+    cursor.execute("SELECT id, actual FROM [QC].[dbo].[CMMdata] where DMC like '%"+dmc+"%' and  order by IDx")
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near the keyword 'order'. (156) (SQLExecDirectW)")
+ ---- dmc_data
+-------------------Log----------------24/03/08-13:32:00
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 872, in get_dmc_data
+    cursor.execute("SELECT id, actual FROM [QC].[dbo].[CMMdata] where DMC like '%"+dmc+"%' and  order by IDx")
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near the keyword 'order'. (156) (SQLExecDirectW)")
+ ---- dmc_data
+-------------------Log----------------24/03/08-13:32:06
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 872, in get_dmc_data
+    cursor.execute("SELECT id, actual FROM [QC].[dbo].[CMMdata] where DMC like '%"+dmc+"%' and  order by IDx")
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near the keyword 'order'. (156) (SQLExecDirectW)")
+ ---- dmc_data
+-------------------Log----------------24/03/08-13:32:08
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 872, in get_dmc_data
+    cursor.execute("SELECT id, actual FROM [QC].[dbo].[CMMdata] where DMC like '%"+dmc+"%' and  order by IDx")
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near the keyword 'order'. (156) (SQLExecDirectW)")
+ ---- dmc_data
+-------------------Log----------------24/03/08-13:32:55
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 872, in get_dmc_data
+    cursor.execute("SELECT id, actual FROM [QC].[dbo].[CMMdata] where DMC like '%"+dmc+"%' and  order by IDx")
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near the keyword 'order'. (156) (SQLExecDirectW)")
+ ---- dmc_data
+-------------------Log----------------24/03/08-13:32:56
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 872, in get_dmc_data
+    cursor.execute("SELECT id, actual FROM [QC].[dbo].[CMMdata] where DMC like '%"+dmc+"%' and  order by IDx")
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near the keyword 'order'. (156) (SQLExecDirectW)")
+ ---- dmc_data
+-------------------Log----------------24/03/08-13:32:58
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 872, in get_dmc_data
+    cursor.execute("SELECT id, actual FROM [QC].[dbo].[CMMdata] where DMC like '%"+dmc+"%' and  order by IDx")
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near the keyword 'order'. (156) (SQLExecDirectW)")
+ ---- dmc_data
+-------------------Log----------------24/03/08-13:33:08
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 872, in get_dmc_data
+    cursor.execute("SELECT id, actual FROM [QC].[dbo].[CMMdata] where DMC like '%"+dmc+"%' and  order by IDx")
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near the keyword 'order'. (156) (SQLExecDirectW)")
+ ---- dmc_data

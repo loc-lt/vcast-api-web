@@ -10,6 +10,7 @@ from ERROR import *
 import datetime
 import traceback
 import pandas as pd
+import requests
 
 CMM = Blueprint("CMM", __name__, url_prefix="/api/v1/CMM")
 
@@ -868,7 +869,7 @@ def get_dmc_data(dmc):
         if dmc =="":
             dmc= "datnon"
 
-        cursor.execute("SELECT id,actual FROM [QC].[dbo].[CMMdata] where DMC like '%"+dmc+"%' order by IDx")
+        cursor.execute("SELECT id, actual FROM [QC].[dbo].[CMMdata] where DMC like '%"+dmc+"%' order by IDx")
         dmc_data_list = cursor.fetchall()
 
         print(len(dmc_data_list))
@@ -907,4 +908,110 @@ def get_dmc_data(dmc):
             'message': str(e)
         }
         Systemp_log(traceback.format_exc(), "dmc_data").append_new_line()
+        return jsonify(ret),500
+    
+@CMM.post('/sixpack')
+@swag_from('./docs/CMM/create_cmm_sixpacking.yaml')
+def create_cmm_sixpacking():
+    try:
+        # Tạo cusor để kết nối với database
+        conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+        cursor = conn.cursor()
+
+        # Lấy dữ liệu datetime_start, datetime_end, location
+        day_start = request.json['dayStart']
+        day_end = request.json['dayEnd']
+        time_start = request.json['timeStart']
+        time_end = request.json['timeEnd']
+
+        datetime_start = day_start + " " + time_start
+        datetime_end = day_end + " " + time_end
+
+        # Lấy dữ liệu dmc_product, data, name
+        dmc_product = request.json['dmcProduct']
+        data = request.json['data']
+        name = request.json['name']
+
+        # url để lấy dữ liệu từ api web của A. Học
+        url = 'http://192.168.8.21:5008/six_pack_v2_1'
+
+        print("SELECT [actual],[nominal],[uppertol],[lowertol] FROM [QC].[dbo].[CMMdata] where id = '"+data+"' and Product like '%"+dmc_product+"%' and TimeSave>'"+datetime_start+"' and TimeSave<'"+datetime_end+"'  order by TimeSave")
+        cursor.execute("SELECT [actual],[nominal],[uppertol],[lowertol] FROM [QC].[dbo].[CMMdata] where id = '"+data+"' and Product like '%"+dmc_product+"%' and TimeSave>'"+datetime_start+"' and TimeSave<'"+datetime_end+"'  order by TimeSave")
+        all_records = cursor.fetchall()
+
+        # Nếu lấy dữ liệu ra trống
+        if all_records == None:
+            ret = {
+                'status':False,
+                'message':'Not Exist Data'
+            }
+            return jsonify(ret),400
+
+        # Nếu có máy
+        ret ={
+                'status':True,
+                'message':'Success',
+                'data':[]
+            }
+        
+        if len(all_records) == 0:
+            ret['data'] = None
+            return jsonify(ret)
+        
+        # Khởi tạo 2 list để lưu dữ liệu sl và su
+        sl_list = []
+        su_list = []
+        actual_list = []
+        nominal_to_sum = 0
+
+        for idx, item in enumerate(all_records):
+            actual, nominal, uppertol, lowertol = item
+            if idx == 0:
+                nominal_to_sum =  nominal
+            
+            try:
+                sl_list.append(float(lowertol))
+            except:
+                pass
+
+            try:
+                su_list.append(float(uppertol))
+            except:
+                pass
+
+            actual_list.append(actual)
+            
+        if len(sl_list) == 0:
+            lsl = None
+        else:
+            lsl = sum(sl_list) / len(sl_list) + float(nominal_to_sum)
+        
+        if len(su_list) == 0:
+            usl = None
+        else:
+            usl = sum(su_list) / len(su_list) + float(nominal_to_sum)
+        
+        data = {
+            "LSL":  lsl,
+            "USL": usl,
+            "data": actual_list,
+            "name": name
+        }
+
+        print(data)
+            
+        if len(data['data']) > 0:
+            Req = requests.post(url=url,json=data)
+            ret["data"] = Req.text
+        else:
+            ret["data"] = []
+            return jsonify(ret), 400
+
+        return jsonify(ret)
+    except Exception as e:
+        ret = {
+            'status':False,
+            'message': str(e)
+        }
+        Systemp_log(traceback.format_exc(), "cmm_sixpack").append_new_line()
         return jsonify(ret),500

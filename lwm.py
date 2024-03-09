@@ -24,7 +24,7 @@ def file_list():
         conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=LWM; Trusted_Connection=No;',timeout=1)
         cursor = conn.cursor()
 
-        cursor.execute("select dmc_product from datalwm order by id desc")
+        cursor.execute("select dmc_product, getdatetime from datalwm order by id desc")
         dmc_products_list = cursor.fetchall()
 
         # Nếu lấy dữ liệu ra trống
@@ -46,7 +46,7 @@ def file_list():
             ret['data'] = None                  
             return jsonify(ret)
         
-        file_list = [row.dmc_product for row in dmc_products_list]
+        file_list = [{'dmc': row.dmc_product, 'datetime': row.getdatetime.strftime("%Y-%m-%d %H:%M:%S")} for row in dmc_products_list]
 
         ret['data'] = file_list
 
@@ -152,4 +152,3 @@ def file_name(fileName):
         }
         Systemp_log(traceback.format_exc(), "file_list").append_new_line()
         return jsonify(ret),500
-    

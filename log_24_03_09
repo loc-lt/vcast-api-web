@@ -1,0 +1,30 @@
+-------------------Log----------------24/03/09-09:34:28
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\chemical.py", line 442, in chart_data
+    group_name = request.json['groupName']
+KeyError: 'groupName'
+ ---- sixpack
+-------------------Log----------------24/03/09-09:36:07
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 938, in create_cmm_sixpacking
+    print("SELECT [actual],[nominal],[uppertol],[lowertol] FROM [QC].[dbo].[CMMdata] where id = '"+data+"' and Product like '%"+dmc_product+"%' and TimeSave>'"+datetime_start+"' and TimeSave<'"+datetime+"'  order by TimeSave")
+TypeError: can only concatenate str (not "module") to str
+ ---- cmm_sixpack
+-------------------Log----------------24/03/09-09:40:29
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 938, in create_cmm_sixpacking
+    print("SELECT [actual],[nominal],[uppertol],[lowertol] FROM [QC].[dbo].[CMMdata] where id = '"+data+"' and Product like '%"+dmc_product+"%' and TimeSave>'"+datetime_start+"' and TimeSave<'"+datetime+"'  order by TimeSave")
+TypeError: can only concatenate str (not "module") to str
+ ---- cmm_sixpack
+-------------------Log----------------24/03/09-09:41:00
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 935, in create_cmm_sixpacking
+    print(type())
+TypeError: type() takes 1 or 3 arguments
+ ---- cmm_sixpack
+-------------------Log----------------24/03/09-09:53:01
+Traceback (most recent call last):
+  File "c:\Users\Administrator\Desktop\REST_API\CMM.py", line 244, in get_machines
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- machines
